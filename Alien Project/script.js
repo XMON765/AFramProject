@@ -1,10 +1,11 @@
-let scene, shield, shottyf, rnd = (l,u) => Math.random()*(u-l) + l, heal2, camera, enemy,  num, dnum, ui2, ui, health = 100, shieldHealth = 250, shieldDead = false, on = true, block = false, x = Math.round(health), y = Math.round(shieldHealth), enemies = [], hitbox;
+let scene, shield, shottyf, rnd = (l,u) => Math.random()*(u-l) + l, heal2, camera, enemy,  num, dnum, ui2, ui, health = 100, shieldHealth = 250, shieldDead = false, on = true, block = false, x = Math.round(health), y = Math.round(shieldHealth), enemies = [], hitbox, gunN;
 
 window.onload = function(){
 	
 	scene = document.querySelector("a-scene");
 	camera = document.getElementById("cam1");
 	hitbox = document.createElement("a-box");
+	gunN = document.createElement("a-gltf-model");
 	heal = document.getElementById("heal");
 	ui = document.getElementById("ui");
 	ui2 = document.getElementById("ui2");
