@@ -20,8 +20,8 @@ window.onload = function(){
 	enemies.push(new Enemy(x,1,z));
 	}
 	enemy = new Enemy(0, 0, -2)
-	heal2 = new Heal(3, 1.5, 5, "green");
-	heal3 = new Heal(5, 1.5, 5, "blue");
+	heal2 = new Heal(10, 1, 5, "green");
+	heal3 = new Heal(-10, 1, 7, "blue");
 	shield = new Shield;
 	
 	num = 0;
