@@ -9,7 +9,9 @@ class Enemy{
 		//this.enemy.setAttribute("[interact]");
 		
 		//enenmy takes damage
-		this.body = document.createElement("a-sphere");
+		this.body = document.createElement("a-cylinder");
+		this.body = document.setAttribute("height", "1");
+		this.body = document.setAttribute("radius" "0.5");
 		this.body.setAttribute("color", "red");
 		this.body.addEventListener("click", ()=>{
 		this.enemyHealth-=20;
