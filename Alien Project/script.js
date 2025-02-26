@@ -19,7 +19,6 @@ window.onload = function(){
     let z = rnd(-20,20);
 	enemies.push(new Enemy(x,1,z));
 	}
-	enemy = new Enemy(0, 0, -2)
 	heal2 = new Heal(10, 1, 5, "green");
 	heal3 = new Heal(-10, 1, 7, "blue");
 	shield = new Shield;
