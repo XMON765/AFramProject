@@ -14,7 +14,7 @@ window.onload = function(){
 	ui2.setAttribute("value", shieldHealth);
 	ui2.setAttribute("position", "3.5 1 -2");
 	
-	for(let i = 0; i < 1; i++){
+	for(let i = 0; i < 5; i++){
     let x = rnd(-20,20);
     let z = rnd(-20,20);
 	enemies.push(new Enemy(x,1,z));
