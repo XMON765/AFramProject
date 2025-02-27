@@ -15,14 +15,14 @@ window.onload = function(){
 	ui2.setAttribute("value", shieldHealth);
 	ui2.setAttribute("position", "3.5 1 -2");
 	
-	for(let i = 0; i < 1; i++){
+	for(let i = 0; i < 5; i++){
     let x = rnd(-20,20);
     let z = rnd(-20,20);
-	enemies.push(new Enemy(x,0,z));
+	enemies.push(new Enemy(x,1,z));
 	}
 	//enemy = new Enemy(0, 0, -2)
-	heal2 = new Heal(3, 0, 5, "green");
-	heal3 = new Heal(5, 0, 5, "blue");
+	heal2 = new Heal(3, 1, 5, "green");
+	heal3 = new Heal(5, 1, 5, "blue");
 	shield = new Shield;
 	
 	num = 0;
