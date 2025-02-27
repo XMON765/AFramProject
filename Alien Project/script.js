@@ -1,11 +1,9 @@
-let scene, shield, shottyf, rnd = (l,u) => Math.random()*(u-l) + l, heal2, camera, enemy,  num, dnum, ui2, ui, health = 100, shieldHealth = 250, shieldDead = false, on = true, block = false, x = Math.round(health), y = Math.round(shieldHealth), enemies = [], hitbox, gunN;
+let scene, shield, shottyf, rnd = (l,u) => Math.random()*(u-l) + l, heal2, camera, enemy,  num, dnum, ui2, ui, health = 100, shieldHealth = 250, shieldDead = false, on = true, block = false, x = Math.round(health), y = Math.round(shieldHealth), enemies = [];
 
 window.onload = function(){
 	
 	scene = document.querySelector("a-scene");
 	camera = document.getElementById("cam1");
-	hitbox = document.createElement("a-box");
-	gunN = document.createElement("a-gltf-model");
 	heal = document.getElementById("heal");
 	ui = document.getElementById("ui");
 	ui2 = document.getElementById("ui2");
@@ -14,13 +12,14 @@ window.onload = function(){
 	ui2.setAttribute("value", shieldHealth);
 	ui2.setAttribute("position", "3.5 1 -2");
 	
-	for(let i = 0; i < 5; i++){
+	for(let i = 0; i < 1; i++){
     let x = rnd(-20,20);
     let z = rnd(-20,20);
-	enemies.push(new Enemy(x,1,z));
+	enemies.push(new Enemy(x,0,z));
 	}
-	heal2 = new Heal(10, 1, 5, "green");
-	heal3 = new Heal(-10, 1, 7, "blue");
+	//enemy = new Enemy(0, 0, -2)
+	heal2 = new Heal(3, 0, 5, "green");
+	heal3 = new Heal(5, 0, 5, "blue");
 	shield = new Shield;
 	
 	num = 0;
