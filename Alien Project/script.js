@@ -1,5 +1,5 @@
 let scene, shield, shottyf, rnd = (l,u) => Math.random()*(u-l) + l, heal2, camera, enemy,  num, dnum, ui2, ui, health = 100, shieldHealth = 250, shieldDead = false, on = true, block = false, x = Math.round(health), y = Math.round(shieldHealth), enemies = [];
-
+let model, hitbox;
 window.onload = function(){
 	
 	scene = document.querySelector("a-scene");
@@ -7,6 +7,9 @@ window.onload = function(){
 	heal = document.getElementById("heal");
 	ui = document.getElementById("ui");
 	ui2 = document.getElementById("ui2");
+
+	hitbox = document.createElement("a-box");
+	model = document.createElement("a-gltf-model")
 	
 	ui.setAttribute("value", x);
 	ui2.setAttribute("value", shieldHealth);
@@ -76,6 +79,7 @@ window.onload = function(){
 let tmp=0, dt = -1; _open = false;
 
 function loop(){
+
 	
 	console.log(pos_x);
 	heal2.healing(10);
