@@ -41,7 +41,7 @@ window.onload = function(){
 	
 	
 	//shield = new Shield;
-	shotty = new Shotty;
+	//shotty = new Shotty;
 	//rifle = new Rifle;
 	
 	window.addEventListener("keypress", function(e){
@@ -80,6 +80,9 @@ let tmp=0, dt = -1; _open = false;
 
 function loop(){
 
+	hitbox.setAttribute("position","0 2 5");
+	model.setAttribute("src", "#520a");
+	model.setAttribute("position","0 2 5");
 	
 	console.log(pos_x);
 	heal2.healing(10);
